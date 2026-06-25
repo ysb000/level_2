@@ -1,0 +1,39 @@
+/* properties02.css */
+.movie {
+    width:600px;
+    height:max-content;
+    background-color:#1D1D1D;
+    padding:50px 0 50px 50px;
+}
+.movie > .poster {margin:0 0 20px 0;}
+.movie > .poster > img {}
+.movie > h1 {
+    font-family:'Noto Sans KR', '맑은 고딕';
+    color:#f3f3f3;
+    font-size:2em;
+    font-weight:700;
+    line-height:1.2;
+    margin:0 0 20px 0;
+}
+.movie > .contents_g {}
+.movie > .contents_g > .date{
+    font-family:'Noto Sans KR', '맑은 고딕';
+    color:#f3f3f3;
+    font-size:0.875em;
+    line-height:1.2;
+    margin:0 0 10px 0;
+}
+.movie > .contents_g > h2 {
+    font-family:'Noto Sans KR', '맑은 고딕';
+    color:#f3f3f3;
+    font-size:1.125em;
+    font-weight:600;
+    line-height:1.2;
+    margin:0 0 10px 0;
+}
+.movie > .contents_g > .story {
+    font-family:'Noto Sans KR', '맑은 고딕';
+    color:#f3f3f3;
+    font-weight:500;
+    line-height:1.5;
+}
