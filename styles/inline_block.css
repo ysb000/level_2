@@ -1,0 +1,152 @@
+/* inline_block.css */
+body {background-color:#f5f5f5;height:200vh; } 
+/* vh: 뷰포트 높이 약자로 사용자가 보는 화면 상대적 높이 */
+#muji {
+    width:402px;
+    height:max-content;
+    border:1px solid #000;
+    background-color:#fff;
+}
+#muji > .ad {
+    background-image:url(../image/muji_ad_bg.jpg);
+    /* ./:현재 작성 파일 위치에서부터 경로 시작 */
+    /* ../ :현재 작성 위치에서 한 번 위로 나가서 경로 시작 */
+    background-size:150%;
+    background-repeat:no-repeat;/* 배경이미지가 요소보다 작을때 사용 */
+    background-color: gray;/* 배경색은 항상 배경이미지 아래로 깔림 */
+    background-position:center top;/* x, y 순서로 작성 */
+    background-attachment:fixed;
+    width:100%; /* 피그마에서 w 채우기 설정 뜻(부모와 너비 같음) */
+    /* max-content는 100%와 다름. 자식의 최대크기와 같다는 뜻 */
+    height:500px; /* 피그마에서 h 고정값 직접 입력시 (px고정) */
+}
+#muji > .ad > h2 {
+    font-family: 'pretendard','sans-serif';
+    font-weight:600;
+    font-size:1.38em;
+    line-height:1.4;
+    letter-spacing:-0.02em;
+    color:#fff;
+}
+#muji > .ad > h2 + p {
+    font-family: 'pretendard','sans-serif';
+    line-height:1.4;
+    letter-spacing:-0.02em;
+    color:#fff;
+}
+#muji > .ad > .ad_num {
+    background-color:rgba(0, 0, 0, 0.5);
+    width:60px;
+    line-height:25px;/* 박스 안에 글자가 있을 때 위아래를 맞춰줌 */
+    border-radius:25px;
+    color:#fff;
+    /* 수평정렬 text-align*/
+    text-align:center;
+    /* 수직정렬 line-height, align-items */
+    /* line-height 
+    행간(글자가 1~2줄 이상일때),
+    정렬 (고정 높이가 있는 수직 중앙 정렬) */
+    font-family:'pretendard','sans-serif';
+    font-size:0.875em;
+    letter-spacing:-0.02em;
+
+}
+#muji > .ad > .ad_num > .current {
+    font-family:'pretendard','sans-serif';
+    color:#fff;
+    font-size:0.875em;
+    letter-spacing:-0.02em;
+}
+#muji > .ad > .ad_num > .total {
+    font-family:'pretendard','sans-serif';
+    color:#fff;
+    font-size:0.875em;
+    letter-spacing:-0.02em;
+}
+/* ===========================================2. 메뉴그룹 시작 */
+#muji > .menu_g {
+    display:flex; 
+    /* 플렉스 설정을 정렬하고 싶은 자식의 부모에게 명령하면 자식들이 옆으로 가는 효과 */
+    padding:16px;
+}
+#muji > .menu_g > .menu {
+    background-color: #fff;
+    /* display: inline-block; */
+    display:flex; align-items:center;
+    width:max-content;
+    margin:0 12px 0 0; /* 메뉴와 메뉴 형제 사이 */
+    padding:6px 12px 6px 6px; /* 메뉴와 자식(p, h3)사이 */
+    border-radius:20px;
+    border:1px solid rgba(0, 0, 0, 0.3);
+}
+#muji > .menu_g > .menu > .thum {
+    width:20px;
+    height:20px;
+    border-radius: 10px; 
+    /* 피그마의 넘친 콘텐츠 숨기기(부모 안에서 자식이 벗어났을 때 부모 안에서만 보이기) */
+    overflow:hidden;
+    /* thum클래스를 가진 p와 형제 h3이 블록태그이기 때문에 수직으로 나열됨
+    그 문제를 해결하기 위해 크기와 여백을 인식하고 옆으로 정렬하는 inline-block 적용 */
+    display: inline-block;
+    margin:0 8px 0 0;
+}
+#muji > .menu_g > .menu > .thum > img {width:100%;} 
+#muji > .menu_g > .menu > h3 {
+    display: inline-block;
+    font-size:0.75em;
+    font-family: 'pretendard', 'sans-serif';
+    letter-spacing:-0.02em;
+    color:#333;
+}
+/* ======================================muji_v2 연습용 */
+#muji_v2 {
+    width:402px;
+    height:max-content;
+    border:1px solid #000;
+    background-color:#fff;
+}
+#muji_v2 > .ad {
+    width:100%;
+    height:500px;
+    background-image:url(../image/muji_ad_bg2.jpg);
+    background-size: 130%;
+    background-position: 55% top;
+}
+#muji_v2 > .ad > h2 {
+    font-family:'pretendard', 'sans-serif';
+    font-weight:600;
+    font-size:1.38em;
+    line-height:1.4;
+    letter-spacing:-0.02em;
+    color:#fff;
+}
+/* ============================v2-메뉴그룹 시작 */
+#muji_v2 > .menu_g {
+    display:flex; 
+    padding:16px;
+}
+#muji_v2 > .menu_g > .menu {
+    width:max-content;
+    background-color:#fff;
+    display:flex; align-items: center;
+    margin:10px;
+    padding:6px 14px 6px 6px;
+    border-radius:20px;
+    border:1px solid rgba(0,0,0,0.4);
+}
+#muji_v2 > .menu_g > .menu > .thum {
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    overflow: hidden;
+    display:inline-block;
+    margin: 0 6px 0 0;
+}
+#muji_v2 > .menu_g > .menu > .thum > img {width:100%;}
+#muji_v2 > .menu_g > .menu > h3  {
+    display:inline-block;
+    font-family: 'pretendard', 'sans-serif';
+    font-size: 0.75em;
+    letter-spacing:-0.02em;
+    color:#222;
+}
