@@ -1,0 +1,46 @@
+/* css */
+/* ======================공통 */
+.box {
+    width:300px; height:400px;
+}
+.box > h1 {}
+.box > p {}
+.box > * {
+    border-width:1px;
+    border-style:solid;
+    width:100px; height:100px;
+} /* 클래스(.) 박스의 모든(*) 자식(>)을 말함 */
+/* =====================개별 */
+.box1 {
+    background-color: yellow;
+    /* 자식을 정렬하고 싶을 때 부모에게 명령 */
+    display:flex;
+    /* flex 기본값 : 메인축(수평), 줄바꿈 불가 */
+    /* 1. 메인축 방향 속성(기본:row) */
+    /* flex-direction:row 아이템의 메인축을 수평으로 방향 맞추기 */
+    /* flex-direction:row-reverse; */
+    /* 2. 줄바꿈 속성(기본: nowrap) */
+    /* nowrap인 경우 px 고정값으로 설정한 대상이 자동으로 가변형(%)이 될 수 있다. */
+    /* flex-wrap:wrap; */
+    /* 3. 메인축방향속성+줄바꿈속성 묶음속성 */
+    flex-flow:row nowrap;
+    /* 4. 메인축(수평, 수직)에 남은 공간에 맞춘 정렬 속성 */
+    /* justify-content:space-between; 피그마 간격 오토와 같음 */ 
+    justify-content:space-around; 
+    /* 5. 교차축(수평, 수직)에 남은 공간에 맞춘 2줄이상 정렬 속성 */
+    /* align-content:space-around; */
+    /* 6. 교차축(수평, 수직)에 남은 공간에 맞춘 1줄 정렬 속성 */
+    align-items:center;
+    /* align-content와 align-items는 flex의 줄바꿈 속성에 따라 둘 중 1개만 사용한다. nowrap일 때 align-items, wrap일 때 align-content */
+}
+.box2 {
+    background-color: greenyellow;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    align-content:center;
+}
+.box1 > h1 {border-color:pink;}
+.box1 > p {border-color:aqua}
+.box2 > h1 {border-color:green}
+.box2 > p {border-color: tomato;}
